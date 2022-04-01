@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import {
   showNotification,
   handleScheduleNotification,
 } from './src/notification';
+import messaging from '@react-native-firebase/messaging';
+import PushNotification from 'react-native-push-notification';
 
 const App = () => {
+  const getPushData = async message => {
+    PushNotification.localNotification({
+      channelId: 'channel-id',
+      message: message.notification.body,
+      title: message.notification.title,
+    });
+    console.log('message', message);
+  };
+  messaging().onMessage(getPushData);
+  messaging().setBackgroundMessageHandler(getPushData);
+  const getToken = async () => {
+    const token = await messaging().getToken();
+    console.log('token', token);
+  };
+  useEffect(() => {
+    getToken();
+  }, []);
   return (
     <View style={styles.container}>
       <Text>Push Notification</Text>

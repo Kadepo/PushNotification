@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "178209278202",
+    "project_id": "fluent-grin-341715",
+    "storage_bucket": "fluent-grin-341715.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178209278202:android:623a83359d2fc3d84ea143",
+        "android_client_info": {
+          "package_name": "com.pushtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178209278202-nofo808crove5el8ku44sauds04va10i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCimYSExmtzk2aQc7vhCyU4e_5mTCGAD5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178209278202-nofo808crove5el8ku44sauds04va10i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
